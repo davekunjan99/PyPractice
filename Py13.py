@@ -6,11 +6,17 @@ sequence2 = 1
 def fibonacciSeries(fibonacci, seq1, seq2):
     i = 0
     for i in range(int(fibonacci)):
-        seq2 = seq1 + seq2
-        fiboSeries.append(seq2)
-        seq1 = seq1 + seq2
-        fiboSeries.append(seq1)
-        print(str(seq1) + " " + str(seq2))
+##        if(i == 0):
+##            fiboSeries.append(seq2)
+##            seq1 = seq1 + seq2
+##            fiboSeries.append(seq1)
+        if(i % 2 == 0):
+            seq2 = seq1 + seq2
+            fiboSeries.append(seq2)
+        else:
+            seq1 = seq1 + seq2
+            fiboSeries.append(seq1)
+##        print(str(seq1) + " " + str(seq2))
         i += 1
     return fiboSeries
 
