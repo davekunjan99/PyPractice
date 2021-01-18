@@ -1,5 +1,24 @@
 import random
 
+randrange = int(input("Enter the range of Set Values: "))
+
+def usingList():
+    count = 0
+    dupList, newList = [], []
+    listLen = int(input("Enter the length of the list: "))
+    
+    for i in range(listLen):
+##        listItem = int(input("Enter the value [" + str(i) + "]: "))
+        listItem = random.randrange(randrange)
+        print(listItem)
+        if listItem not in dupList:
+            dupList.append(listItem)
+
+    return dupList
+
+print(usingList())
+
+
 def usingSet():
     dupList, newlist = [], []
     listLen = int(input("Enter the length of the list: "))
@@ -7,6 +26,7 @@ def usingSet():
     for i in range(listLen):
         listItem = int(input("Enter the value [" + str(i) + "]: "))
         dupList.append(listItem)
+##        dupList.append(random.randrange(randrange))
 
     newList = set(dupList)
     newList = list(newList)
@@ -19,7 +39,6 @@ def usingSetsEx5():
     newSet = set()
     set1 = set()
     set2 = set()
-    randrange = int(input("Enter the range of Set Values: "))
     lenSet1 = int(input("Enter length of Set 1: "))
     lenSet2 = int(input("Enter length of Set 2: "))
 
