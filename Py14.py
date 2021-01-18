@@ -10,11 +10,22 @@ def usingList():
     for i in range(listLen):
 ##        listItem = int(input("Enter the value [" + str(i) + "]: "))
         listItem = random.randrange(randrange)
-        print(listItem)
-        if listItem not in dupList:
-            dupList.append(listItem)
+        
+        dupList.append(listItem)
 
-    return dupList
+##        print(listItem)
+
+        for i in range(len(dupList)):
+            if dupList[i] not in newList:
+                newList.append(dupList[i])
+            else:
+                continue
+        
+##        if listItem not in dupList:
+##            dupList.append(listItem)
+
+    print(dupList)
+    return newList
 
 print(usingList())
 
@@ -25,6 +36,7 @@ def usingSet():
     
     for i in range(listLen):
         listItem = int(input("Enter the value [" + str(i) + "]: "))
+        
         dupList.append(listItem)
 ##        dupList.append(random.randrange(randrange))
 
@@ -44,9 +56,12 @@ def usingSetsEx5():
 
     for i in range(lenSet1):
         set1.add(random.randrange(randrange))
+        
     print(set1)
+    
     for i in range(lenSet2):
         set2.add(random.randrange(randrange))
+        
     print(set2)
 
     newSet = set1.intersection(set2)
